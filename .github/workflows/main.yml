@@ -38,9 +38,11 @@ jobs:
     steps:
       - uses: actions/checkout@master
         
-      - name: VIEW THE INVISIBLE
+      - name: mess
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO_DEBUG }}
           token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
-          args: The ${{ github.event_name }}.
+          message: |
+           The ${{ github.event_name }} event triggered final step.
+      echo This event is a pull request that had an assignee removed.
