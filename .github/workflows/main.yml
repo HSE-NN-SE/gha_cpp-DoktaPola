@@ -37,14 +37,10 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      
-      - name: Download 
-      
-        uses: appleboy/telegram-action@master
+      - name: Download
+      - uses: actions/download-artifact@v2
         with:
           name: my-artifact
-          path: ./
           
       - name: send mess
         uses: appleboy/telegram-action@master
@@ -52,5 +48,4 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO_DEBUG }}
           token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
           document: ${{ github.workspace}}/my-artifact
-          args: The ${{ github.event_name }}.
 
