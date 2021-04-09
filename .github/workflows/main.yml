@@ -21,6 +21,9 @@ jobs:
       - uses: ilammy/msvc-dev-cmd@v1
       - name: build
         run: cl /EHsc Automata.cpp main.cpp
+
+      - name: ls
+        run : ls
         
       - name: 'Upload Artifact'
         uses: actions/checkout@v2
