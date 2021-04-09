@@ -1,5 +1,5 @@
 #include "Automata.h"
-
+using namespace std;
 Automata::Automata(STATES state) {
   this->state = state;
   this->cash = 0; // текущая сумма
