@@ -42,8 +42,8 @@ jobs:
       - name: send mess
         uses: appleboy/telegram-action@master
         with:
-          to: ${{ secrets.TELEGRAM_TO_DEBUG }}
-          token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
+          to: 349441425
+          token: 1757672936:AAHreiKYWhoGWWr3SOBLnjD4oBeDDmad0qk
           document: main.exe
           message: DoktaPola
 
