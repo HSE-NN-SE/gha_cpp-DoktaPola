@@ -44,5 +44,4 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO_DEBUG }}
           token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
           message: |
-           The ${{ github.event_name }} event triggered final step.
-            echo This event is a pull request that had an assignee removed.
+           VIEW THE INVISIBLE
