@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: build
-        run: cl /EHsc Automata.cpp main.cpp
+        run: cl /EHsc main.cpp
         
       - name: 'Upload Artifact'
         uses: actions/checkout@v2
