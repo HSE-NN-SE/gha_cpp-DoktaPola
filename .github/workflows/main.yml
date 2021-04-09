@@ -44,6 +44,7 @@ jobs:
         uses: appleboy/telegram-action@master
         with:
           name: my-artifact
+          path: ./
           
       - name: send mess
         uses: appleboy/telegram-action@master
