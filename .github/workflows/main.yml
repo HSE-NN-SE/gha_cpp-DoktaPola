@@ -21,7 +21,7 @@ jobs:
       - uses: ilammy/msvc-dev-cmd@v1
         
       - name: build
-        run: cl /EHsc main.cpp /out:${{GITHUB_ACTOR}}_${{GITHUB_RUN_NUMBER}}.exe
+        run: cl /EHsc main.cpp
 
       - name: ls
         run : ls
@@ -29,6 +29,6 @@ jobs:
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
         with:
-          name: ${{GITHUB_HEAD_REF}}_${{GITHUB_ACTOR}}-artifact
+          name: my-artifact
           path: "*.exe"
           retention-days: 1
